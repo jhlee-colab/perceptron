@@ -78,7 +78,6 @@
     
 
 
-```plain
 **[Example]**
 
 when $w_0=1$ and $\mathbf{w}=\begin{bmatrix}3 \\ -2 \end{bmatrix}$
@@ -103,7 +102,7 @@ $\hat y = g(0)=\frac{1}{1+e^{-0}}=\frac{1}{1+1}=0.5$
 
 ![download-4.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/download-4.png)
 
-```
+
 
 ### The Perceptron: Simplified
 
@@ -191,8 +190,6 @@ class MyDenseLayer(nn.Module):
 
 ## Example
 
-<aside>
-💡
 
 Will I pass this class?
 
@@ -200,7 +197,7 @@ simple two feature model
 
 - $x_1$ = # of lectures you attend
 - $x_2$ = Hours spent on the final project
-</aside>
+
 
 ![image.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image.png)
 
@@ -263,8 +260,6 @@ simple two feature model
 
 ![image.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%204.png)
 
-<aside>
-💡
 
 **[Algorithm]**
 
@@ -273,7 +268,7 @@ simple two feature model
 3.    Compute gradient, $\frac{\partial J(\mathbf{W})}{\partial \mathbf{W}}$
 4.    Update weights, $\mathbf{W} \leftarrow \mathbf{W} - \eta \frac{\partial J(\mathbf{W})}{\partial \mathbf{W}}$
 5. Return weights
-</aside>
+
 
 ### Backpropagation
 
@@ -328,8 +323,6 @@ simple two feature model
 
 ### Stochastic Gradient Descent
 
-<aside>
-💡
 
 [Algorithm]
 
@@ -339,7 +332,7 @@ simple two feature model
 4.    Compute gradient, $\frac{\partial J(\mathbf{W})}{\partial \mathbf{W}}=\frac{1}{B}\sum_{k=1}^B\frac{\partial J_k(\mathbf{W})}{\partial \mathbf{W}}$
 5.    Update weights, $\mathbf{W} \leftarrow \mathbf{W} - \eta \frac{\partial J(\mathbf{W})}{\partial \mathbf{W}}$
 6. Return weights
-</aside>
+
 
 - Mini-batch의 효과
     - 정확한 기울기 추정

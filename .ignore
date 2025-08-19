@@ -37,3 +37,9 @@ profile_default/
 
 # Environment variables
 .env
+
+# ipynb 
+*.ipynb 
+
+# etc 
+.python-version

@@ -4,7 +4,7 @@
 ### Arguments
 | argument | description |
 | - | - |
-| n_trials | The number of trials: default 1 |
+| --n_trials | The number of trials: default 1 |
 | --logic_gate | Choose a logic gate: [**AND**, OR, XOR] |
 | --model | Choice a model: [**pertceptron**, mlp] |
 | --hidden_layers | hidden layers: ex) 2 4 4 |

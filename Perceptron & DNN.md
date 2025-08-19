@@ -1,11 +1,3 @@
-# Perceptron & DNN
-
-생성자: 이종훈
-생성 일시: July 1, 2025 2:06 PM
-카테고리: DNN
-최종 편집자:: 이종훈
-최종 업데이트 시간: August 19, 2025 2:31 PM
-
 # Deep Learning
 
 ## Why Deep Learning?
@@ -85,9 +77,8 @@
     ![download-2.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/download-2.png)
     
 
-<aside>
-💡
 
+```plain
 **[Example]**
 
 when $w_0=1$ and $\mathbf{w}=\begin{bmatrix}3 \\ -2 \end{bmatrix}$
@@ -112,7 +103,7 @@ $\hat y = g(0)=\frac{1}{1+e^{-0}}=\frac{1}{1+1}=0.5$
 
 ![download-4.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/download-4.png)
 
-</aside>
+```
 
 ### The Perceptron: Simplified
 

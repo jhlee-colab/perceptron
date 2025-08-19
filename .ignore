@@ -1,0 +1,39 @@
+# Byte-compiled / optimized / compiled files
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+
+# Virtual environment
+venv/
+.venv/
+env/
+.env/
+
+# Distribution / build files
+dist/
+build/
+*.egg-info/
+.eggs/
+
+# Editor-specific files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# IPython / Jupyter Notebook
+.ipynb_checkpoints
+profile_default/
+
+# Database files
+*.sqlite3
+*.db
+
+# Environment variables
+.env

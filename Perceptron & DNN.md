@@ -50,7 +50,23 @@
     
     - Linear combination of inputs: $w_0+\sum^m_{i=1}{x_iw_i}$
     - Non-linear activation function: $g(\cdot)$
-    - $\mathbf{x}=\begin{bmatrix} x_1 \\ \vdots \\ x_m \end{bmatrix}$ and $\mathbf{w}=\begin{bmatrix} w_1 \\ \vdots \\ w_m \end{bmatrix}$
+    - Matrix $\mathbf{x}$, $\mathbf{w}$
+
+$$
+\mathbf{x} =
+\begin{bmatrix}
+x_{1} \\
+\vdots \\
+x_{m}
+\end{bmatrix}
+\ \text{and} \
+\mathbf{w} =
+\begin{bmatrix}
+w_{1} \\
+\vdots \\
+w_{m}
+\end{bmatrix}
+$$
 
 ![mit.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/mit%201.png)
 
@@ -72,24 +88,82 @@
     
 - Rectified Linear Unit(ReLU)
     - $f(z)=\max(0, z)$
-    - $f'(z)=\begin{cases} 1, & z \gt 0 \\ 0, & \text{otherwise} \end{cases}$
-    
-    ![download-2.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/download-2.png)
+    - $f'(z)$
+
+$$
+f'(z)=
+\begin{cases} 1, & z \gt 0 \\
+0, & \text{otherwise}
+\end{cases}
+$$
+
+
+![download-2.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/download-2.png)
     
 
 
 > [!Important]
 > **[Example]**
 >
-> when $w_0=1$ and $\mathbf{w}=\begin{bmatrix}3 \\ -2 \end{bmatrix}$
-> $\hat y = g(w_0+\mathbf{x^T}\mathbf{w})=g(1+\begin{bmatrix}x_1 \\ x_2 \end{bmatrix}^T \begin{bmatrix}3 \\ -2 \end{bmatrix})$
-> $\hat y = g(1+3x_1-2x_2)$
-> 1) 입력 $\mathbf{x}=\begin{bmatrix}-1 \\ 2 \end{bmatrix}$
-> $\hat y = g(1 + (3 \times-1)-(2\times 2))=g(-6)\approx0.002$
-> 2) 입력 $\mathbf{x}=\begin{bmatrix}1 \\ -2 \end{bmatrix}$
-> $\hat y = g(1 + (3 \times1)-(2\times -2))=g(8)\approx0.9997$
+> When
+> 
+> $$
+> w_0=1 \
+> \ \text{and} \
+> \ \mathbf{w}=
+> \begin{bmatrix}
+> 3 \\
+> -2
+> \end{bmatrix}
+> $$
+> $$
+> \hat y = g(w_0+\mathbf{x^T}\mathbf{w})=
+> g(1+
+> \begin{bmatrix}
+> x_1 \\
+> x_2
+> \end{bmatrix}^T
+> \begin{bmatrix}
+> 3 \\
+> -2
+> \end{bmatrix})
+> $$
+> $$
+> \hat y = g(1+3x_1-2x_2)
+> $$
+> 
+> 1) 입력 $\mathbf{x}$
+> 
+> $$
+> \mathbf{x}=
+> \begin{bmatrix}
+> -1 \\
+> 2
+> \end{bmatrix}
+> $$
+> $$
+> \hat y = g(1 + (3 \times-1)-(2\times 2))=g(-6)\approx0.002
+> $$
+> 
+> 2) 입력 $\mathbf{x}$
+>
+> $$
+> \mathbf{x}=
+> \begin{bmatrix}
+> 1 \\
+> -2
+> \end{bmatrix}
+> $$
+> $$
+> \hat y = g(1 + (3 \times1)-(2\times -2))=g(8)\approx0.9997
+> $$
+> 
 > 3) $z=0$
-> $\hat y = g(0)=\frac{1}{1+e^{-0}}=\frac{1}{1+1}=0.5$
+> 
+> $$
+> \hat y = g(0)=\frac{1}{1+e^{-0}}=\frac{1}{1+1}=0.5
+> $$
+>
 > ![mit.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/f09ecd37-32b6-412c-8daa-7b8c0e8c8742.png)
 > ![download-4.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/download-4.png)
 
@@ -150,14 +224,9 @@ class MyDenseLayer(nn.Module):
 
 ### Single Layer Neural Network
 
-- hidden layer
-    
-    $z_i=w^{(1)}_{0,i}+\sum^m_{j=1}x_jw_{j,i}^{(1)}$
-    
-- final output
-    
-    $\hat y_i=g(w^{(2)}_{0,i}+\sum^{d_1}_{j=1}g(z_j)w_{j,i}^{(2)})$
-    
+- hidden layer: $z_i = w_{0,i}^{(1)} + \sum_{j=1}^m x_j w_{j,i}^{(1)}$
+
+- final output: $\hat{y_i}=g(w_{0,i}^{(2)}+\sum_{j=1}^{d_1}g(z_j)w_{j,i}^{(2)})$ 
 
 ![mit.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/7ddd32e3-2d37-4022-9641-1c4d1ea0f86e.png)
 
@@ -165,7 +234,7 @@ class MyDenseLayer(nn.Module):
     
     $z_2=w_{0,2}^{(1)}+\sum_{j=1}^m{x_jw_{j,2}^{(1)}}$
     
-    $z_2=w_{0,2}^{(1)}+x_1w^{(1)}_{1,2}+x_2w^{(1)}_{2,2}+x_mw^{(1)}_{m,2}$
+    $z_2=w_{0,2}^{(1)}+x_1w_{1,2}^{(1)}+x_2w_{2,2}^{(1)}+x_mw_{m,2}^{(1)}$
     
 
 ![mit.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/ce4c45f2-12d1-4542-909c-7ae7d0f24203.png)
@@ -174,7 +243,7 @@ class MyDenseLayer(nn.Module):
 
 - Hidden
     
-    $z_{k,i}=w^{(k)}_{0,i}+\sum_{j=1}^{n_{k-1}}{g(z_{k-1,j})w_{j,i}^{(k)}}$
+    $z_{k,i}=w_{0,i}^{(k)}+\sum_{j=1}^{n_{k-1}}{g(z_{k-1,j})w_{j,i}^{(k)}}$
     
 
 ![mit.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/626bcf92-ab81-42cb-9d55-ab09f64680a4.png)
@@ -230,12 +299,18 @@ simple two feature model
 ### Loss Optimization
 
 - 가장 낮은 손실 값을 갖는 네트워크 가중치를 찾는 것
-    
-    $\mathbf{W}^*=\argmin\limits_{\mathbf{W}} \frac{1}{n}\sum^n_{i=1}\mathcal{L}(f(x^{(i)};\mathbf{W}), y^{(i)})$ 
-    
-    $\mathbf{W}^*=\argmin\limits_{\mathbf{W}} J(\mathbf{W})$ 
-    
-    $\rightarrow \mathbf{W}=\{\mathbf{W}^{(0)},\mathbf{W}^{(1)},\cdots\}$
+
+$$
+\mathbf{W}^* = \underset{\mathbf{W}}{\mathrm{arg\ min}}\ 
+\frac{1}{n}\sum_{i=1}^n \mathcal{L}\bigl(f(x^{(i)};\mathbf{W}),\ y^{(i)}\bigr)
+$$
+$$
+\mathbf{W}^* = \underset{\mathbf{W}}{\mathrm{arg\ min}}\
+\mathcal{J}(\mathbf{W})
+$$
+$$
+\rightarrow \mathbf{W}=\\{ \mathbf{W}^{(0)},\mathbf{W}^{(1)},\cdots \\}
+$$
     
 
 ![image.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%203.png)
@@ -267,13 +342,13 @@ simple two feature model
 
 ![image.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%205.png)
 
-                              $\frac{\partial J(\mathbf{W})}{\partial w_2}=$$\frac{\partial J(\mathbf{W})}{\partial \hat y}$ x $\frac{\partial \hat y}{\partial w_2}$      ← chain rule 적용    
+$\frac{\partial J(\mathbf{W})}{\partial w_2}=\frac{\partial J(\mathbf{W})}{\partial \hat y} \times \frac{\partial \hat y}{\partial w_2}$      ← chain rule 적용    
 
 ![image.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%206.png)
 
-                             $\frac{\partial J(\mathbf{W})}{\partial w_1}=$$\frac{\partial J(\mathbf{W})}{\partial \hat y}$ x $\frac{\partial \hat y}{\partial w_1}$
+$\frac{\partial J(\mathbf{W})}{\partial w_1}=\frac{\partial J(\mathbf{W})}{\partial \hat y} \times \frac{\partial \hat y}{\partial w_1}$
 
-                             $\frac{\partial J(\mathbf{W})}{\partial w_1}=$$\frac{\partial J(\mathbf{W})}{\partial \hat y}$ x $\frac{\partial \hat y}{\partial z_1}$ x $\frac{\partial z_1}{\partial w_1}$      ← chain rule 적용
+$\frac{\partial J(\mathbf{W})}{\partial w_1}=\frac{\partial J(\mathbf{W})}{\partial \hat y} \times \frac{\partial \hat y}{\partial z_1} \times \frac{\partial z_1}{\partial w_1}$      ← chain rule 적용
 
 - 뒤로 가면서 chain rule을 적용하며, 모든 가중치에 대해 반복 수행
 
@@ -350,14 +425,12 @@ simple two feature model
         1. 통상 레이어의 50%의 활성을 드랍시킨다.
         2. 네트워크가 어떤 노드에 의존하지 않도록 강제시킨다.
     
-    ![Dropout](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%209.png)
-    
-    Dropout
+![Dropout](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%209.png)    
     
 2. Early Stopping
     1. overfitting 되기 전에 훈련을 종료시킨다.
     
-    ![무제.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/%E1%84%86%E1%85%AE%E1%84%8C%E1%85%A6.png)
+![무제.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/%E1%84%86%E1%85%AE%E1%84%8C%E1%85%A6.png)
     
 
 ## XOR Problem & Visualization

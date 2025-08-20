@@ -430,7 +430,7 @@ $\frac{\partial J(\mathbf{W})}{\partial w_1}=\frac{\partial J(\mathbf{W})}{\part
 2. Early Stopping
     1. overfitting 되기 전에 훈련을 종료시킨다.
     
-![무제.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/%E1%84%86%E1%85%AE%E1%84%8C%E1%85%A6.png)
+![earlystop.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/earlystop.png)
     
 
 ## XOR Problem & Visualization
@@ -543,7 +543,7 @@ $\frac{\partial J(\mathbf{W})}{\partial w_1}=\frac{\partial J(\mathbf{W})}{\part
     
     - visualization
         - 모델의 출력 수식 vs 모델의 출력
-            - 0.499236404895782**x1 + 0.499229192733765**x2 - 0.249090000987053
+            - 0.499236404895782x1 + 0.499229192733765x2 - 0.249090000987053
             
             ```python
             model output(model(X)): [-0.2491,  0.2501,  0.2501,  0.7494]
@@ -597,7 +597,7 @@ $\frac{\partial J(\mathbf{W})}{\partial w_1}=\frac{\partial J(\mathbf{W})}{\part
     
     - visualization
         - 모델의 출력 수식 vs 모델의 출력
-            - 0.500494122505188**x1 + 0.500532388687134**x2 + 0.249391213059425
+            - 0.500494122505188x1 + 0.500532388687134x2 + 0.249391213059425
         
         ```python
         model output(model(X)): [0.2494, 0.7499, 0.7499, 1.2504]
@@ -650,7 +650,7 @@ $\frac{\partial J(\mathbf{W})}{\partial w_1}=\frac{\partial J(\mathbf{W})}{\part
     
     - visualization
         - 모델의 출력 수식 vs 모델의 출력
-            - 0.00310595682822168**x1 + 0.00300022657029331**x2 + 0.496378600597382
+            - 0.00310595682822168x1 + 0.00300022657029331x2 + 0.496378600597382
             
             ```python
             model output(model(X)): [0.4964, 0.4994, 0.4995, 0.5025]
@@ -669,22 +669,62 @@ $\frac{\partial J(\mathbf{W})}{\partial w_1}=\frac{\partial J(\mathbf{W})}{\part
     
     - Output Equation
         - $g(z_1)$: 여기서 $g(\cdot)$은 Sigmoid 함수 적용
-            - $z_1=\begin{bmatrix}x_1,&x_2 \end{bmatrix}\begin{bmatrix}w_1 \\ w_2 \end{bmatrix} + b_1=w_1x_1+w_2x_2 + b_1$
-            - $g(z_1)=\frac{1}{1+e^{-z_1}}=\frac{1}{1+e^{-(w_1x_1+w_2x_2 + b_1)}}$
-            
-            ![image.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%2015.png)
-            
+            - $z_1$
+
+$$
+z_1=
+\begin{bmatrix}
+x_1 & x_2 
+\end{bmatrix}
+\begin{bmatrix}
+w_1 \\ 
+w_2 
+\end{bmatrix} + b_1 = w_1x_1 + w_2x_2 + b_1
+$$
+$$
+g(z_1)=\frac{1}{1+e^{-z_1}}=\frac{1}{1+e^{-(w_1x_1+w_2x_2 + b_1)}}
+$$
+
+![image.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%2015.png)              
+
         - $g(z_2)$
-            - $z_2=\begin{bmatrix}x_1,&x_2 \end{bmatrix}\begin{bmatrix}w_3 \\ w_4 \end{bmatrix} + b_2 = w_3x_1+w_4x_2 + b_2$
-            - $g(z_2)=\frac{1}{1+e^{-z_1}}=\frac{1}{1+e^{-(w_3x_1+w_4x_2 + b_2)}}$
+            - $z_2$
+
+$$
+z_2=
+\begin{bmatrix}
+x_1&x_2 
+\end{bmatrix}
+\begin{bmatrix}
+w_3 \\ 
+w_4 
+\end{bmatrix} + b_2 = w_3x_1+w_4x_2 + b_2
+$$
+$$
+g(z_2)=\frac{1}{1+e^{-z_1}}=\frac{1}{1+e^{-(w_3x_1+w_4x_2 + b_2)}}
+$$
             
-            ![image.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%2016.png)
+![image.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%2016.png)
+
             
         - $g(\hat y)$
-            - $\hat y=\begin{bmatrix}g(z_1),&g(z_2) \end{bmatrix}\begin{bmatrix}w_5 \\ w_6 \end{bmatrix} + b_3 = w_5g(z_1)+w_6g(z_2) + b_3 = w_5\frac{1}{1+e^{-(w_1x_1+w_2x_2 + b_1)}}+w_6\frac{1}{1+e^{-(w_3x_1+w_4x_2 + b_2)}} + b_3$
-            - $g(\hat y)=\frac{1}{1+e^{-\hat y}}=\frac{1}{1+e^{-(w_5\frac{1}{1+e^{-(w_1x_1+w_2x_2 + b_1)}}+w_6\frac{1}{1+e^{-(w_3x_1+w_4x_2 + b_2)}} + b_3)}}$
+            - $\hat y$
+
+$$
+\hat y=
+\begin{bmatrix}
+g(z_1) &g(z_2) 
+\end{bmatrix}
+\begin{bmatrix}
+w_5 \\ 
+w_6 
+\end{bmatrix} + b_3 = w_5g(z_1)+w_6g(z_2) + b_3 = w_5\frac{1}{1+e^{-(w_1x_1+w_2x_2 + b_1)}}+w_6\frac{1}{1+e^{-(w_3x_1+w_4x_2 + b_2)}} + b_3
+$$
+
+
+            - $g(\hat y)=\frac{1}{1+e^{-\hat y}}=\frac{1}{1+e^{-(w_5\frac{1}{1+e^{-(w_1x_1 + w_2x_2 + b_1)}} + w_6 \frac{1}{1+e^{-(w_3x_1 + w_4x_2 + b_2)}} + b_3)}}$
             
-            ![image.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%2017.png)
+![image.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%2017.png)
             
     
     ```python

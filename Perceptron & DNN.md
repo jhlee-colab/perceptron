@@ -76,7 +76,7 @@ $$
 
 - Sigmoid
     - $f(z)=\frac{1}{1+e^{-z}}$
-    - $f'(z)=f(z)\{1-f(z)\}$
+    - $f'(z)=f(z)\\{1-f(z)\\}$
     
     ![download.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/download.png)
     

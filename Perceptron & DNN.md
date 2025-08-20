@@ -78,29 +78,20 @@
     
 
 
-**[Example]**
-
-when $w_0=1$ and $\mathbf{w}=\begin{bmatrix}3 \\ -2 \end{bmatrix}$
-
-$\hat y = g(w_0+\mathbf{x^T}\mathbf{w})=g(1+\begin{bmatrix}x_1 \\ x_2 \end{bmatrix}^T \begin{bmatrix}3 \\ -2 \end{bmatrix})$
-
-$\hat y = g(1+3x_1-2x_2)$
-
-1) 입력 $\mathbf{x}=\begin{bmatrix}-1 \\ 2 \end{bmatrix}$
-
-$\hat y = g(1 + (3 \times-1)-(2\times 2))=g(-6)\approx0.002$
-
-2) 입력 $\mathbf{x}=\begin{bmatrix}1 \\ -2 \end{bmatrix}$
-
-$\hat y = g(1 + (3 \times1)-(2\times -2))=g(8)\approx0.9997$
-
-3) $z=0$
-
-$\hat y = g(0)=\frac{1}{1+e^{-0}}=\frac{1}{1+1}=0.5$
-
-![mit.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/f09ecd37-32b6-412c-8daa-7b8c0e8c8742.png)
-
-![download-4.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/download-4.png)
+> [!Important]
+> **[Example]**
+>
+> when $w_0=1$ and $\mathbf{w}=\begin{bmatrix}3 \\ -2 \end{bmatrix}$
+> $\hat y = g(w_0+\mathbf{x^T}\mathbf{w})=g(1+\begin{bmatrix}x_1 \\ x_2 \end{bmatrix}^T \begin{bmatrix}3 \\ -2 \end{bmatrix})$
+> $\hat y = g(1+3x_1-2x_2)$
+> 1) 입력 $\mathbf{x}=\begin{bmatrix}-1 \\ 2 \end{bmatrix}$
+> $\hat y = g(1 + (3 \times-1)-(2\times 2))=g(-6)\approx0.002$
+> 2) 입력 $\mathbf{x}=\begin{bmatrix}1 \\ -2 \end{bmatrix}$
+> $\hat y = g(1 + (3 \times1)-(2\times -2))=g(8)\approx0.9997$
+> 3) $z=0$
+> $\hat y = g(0)=\frac{1}{1+e^{-0}}=\frac{1}{1+1}=0.5$
+> ![mit.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/f09ecd37-32b6-412c-8daa-7b8c0e8c8742.png)
+> ![download-4.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/download-4.png)
 
 
 
@@ -260,14 +251,14 @@ simple two feature model
 
 ![image.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%204.png)
 
-
-**[Algorithm]**
-
-1. Initialize weights randomly $\sim \mathcal{N}(0,\sigma^2)$
-2. Loop until convergence:
-3.    Compute gradient, $\frac{\partial J(\mathbf{W})}{\partial \mathbf{W}}$
-4.    Update weights, $\mathbf{W} \leftarrow \mathbf{W} - \eta \frac{\partial J(\mathbf{W})}{\partial \mathbf{W}}$
-5. Return weights
+> [!Important]
+> **[Algorithm]**
+> 
+> 1. Initialize weights randomly $\sim \mathcal{N}(0,\sigma^2)$
+> 2. Loop until convergence:
+> 3.    Compute gradient, $\frac{\partial J(\mathbf{W})}{\partial \mathbf{W}}$
+> 4.    Update weights, $\mathbf{W} \leftarrow \mathbf{W} - \eta \frac{\partial J(\mathbf{W})}{\partial \mathbf{W}}$
+> 5. Return weights
 
 
 ### Backpropagation
@@ -323,15 +314,15 @@ simple two feature model
 
 ### Stochastic Gradient Descent
 
-
-[Algorithm]
-
-1. Initialize weights randomly $\sim \mathcal{N}(0, \sigma^2)$
-2. Loop until convergence:
-3.    pick batch of $B$ data points
-4.    Compute gradient, $\frac{\partial J(\mathbf{W})}{\partial \mathbf{W}}=\frac{1}{B}\sum_{k=1}^B\frac{\partial J_k(\mathbf{W})}{\partial \mathbf{W}}$
-5.    Update weights, $\mathbf{W} \leftarrow \mathbf{W} - \eta \frac{\partial J(\mathbf{W})}{\partial \mathbf{W}}$
-6. Return weights
+> [!Important]
+> **[Algorithm]**
+> 
+> 1. Initialize weights randomly $\sim \mathcal{N}(0, \sigma^2)$
+> 2. Loop until convergence:
+> 3.    pick batch of $B$ data points
+> 4.    Compute gradient, $\frac{\partial J(\mathbf{W})}{\partial \mathbf{W}}=\frac{1}{B}\sum_{k=1}^B\frac{\partial J_k(\mathbf{W})}{\partial \mathbf{W}}$
+> 5.    Update weights, $\mathbf{W} \leftarrow \mathbf{W} - \eta \frac{\partial J(\mathbf{W})}{\partial \mathbf{W}}$
+> 6. Return weights
 
 
 - Mini-batch의 효과

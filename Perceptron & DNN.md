@@ -10,21 +10,18 @@
     - 확장이 용이하지 않음
 - Features
     - Low Level Features
-        
-        ![Lines & Edges](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/e2ce9bf6-1ae2-4c39-90b5-14c441aa8883.png)
-        
+ 
+      <img src="Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/e2ce9bf6-1ae2-4c39-90b5-14c441aa8883.png" alt="Lines & Edges" width="300">
         Lines & Edges
         
     - Mid Level Features
-        
-        ![Eyes & Nose & Ears](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/35a2eaa2-2f5b-426e-b010-64601f421c75.png)
-        
+ 
+      <img src="Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/35a2eaa2-2f5b-426e-b010-64601f421c75.png" alt="Eyes & Nose & Ears" width="300">
         Eyes & Nose & Ears
         
     - High Level Features
         
-        ![Facial Structure](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/ee61e95c-937b-4ba7-9a08-045292a0a74b.png)
-        
+       <img src="Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/ee61e95c-937b-4ba7-9a08-045292a0a74b.png" alt="Facial Structure" width="300">
         Facial Structure
         
 
@@ -38,9 +35,9 @@
     
     - Linear combination of inputs: $\sum^m_{i=1}{x_iw_i}$
     - Non-linear activation function: $g(\cdot)$
-    
 
-![mit.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/mit.png)
+    <br>
+    <img src="Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/mit.png" alt="forward propagation" width="500">
 
 - Output with bias
     
@@ -59,7 +56,7 @@ x_{1} \\
 \vdots \\
 x_{m}
 \end{bmatrix}
-\ \text{and} \
+\ \text{and} \ \
 \mathbf{w} =
 \begin{bmatrix}
 w_{1} \\
@@ -68,7 +65,7 @@ w_{m}
 \end{bmatrix}
 $$
 
-![mit.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/mit%201.png)
+<img src="Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/mit%201.png" alt="forward propagation" width="500">
 
 ### Activation Functions
 
@@ -77,14 +74,14 @@ $$
 - Sigmoid
     - $f(z)=\frac{1}{1+e^{-z}}$
     - $f'(z)=f(z)\\{1-f(z)\\}$
-    
-    ![download.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/download.png)
+
+    <img src="Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/download.png" alt="sigmoid" width="300">
     
 - Hyperbolic Tangent
     - $f(z)=\frac{e^z-e^{-z}}{e^z+e^{-z}}$
     - $f'(z)=1-f(z)^2$
-    
-    ![download-1.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/download-1.png)
+
+    <img src="Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/download-1.png" alt="tanh" width="300">
     
 - Rectified Linear Unit(ReLU)
     - $f(z)=\max(0, z)$
@@ -97,8 +94,7 @@ f'(z)=
 \end{cases}
 $$
 
-
-![download-2.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/download-2.png)
+<img src="Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/download-2.png" alt="relu" width="300">
     
 
 
@@ -158,20 +154,21 @@ $$
 > \hat y = g(1 + (3 \times1)-(2\times -2))=g(8)\approx0.9997
 > $$
 > 
-> 3) $z=0$
+> 3) $z=0 \ \rightarrow \ 1+3x_1-2x_2 = 0 $
 > 
 > $$
 > \hat y = g(0)=\frac{1}{1+e^{-0}}=\frac{1}{1+1}=0.5
 > $$
 >
-> ![mit.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/f09ecd37-32b6-412c-8daa-7b8c0e8c8742.png)
-> ![download-4.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/download-4.png)
+> <img src="Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/f09ecd37-32b6-412c-8daa-7b8c0e8c8742.png" alt="example" width="500">
+> <img src="Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/download-4.png" alt="example" width="500">
+>
 
 
 
 ### The Perceptron: Simplified
 
-![mit.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/cf0dc832-f216-4807-a01b-9f021262f6fe.png)
+<img src="Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/cf0dc832-f216-4807-a01b-9f021262f6fe.png" alt="perceptron" width="500">
 
 $z=w_0+\sum^m_{j=1}x_jw_j$
 
@@ -181,7 +178,7 @@ $y=g(w_0+\sum^m_{j=1}x_jw_j)$
 
 - Dense layers: 모든 입력이 모든 출력과 조밀하게 연결되어 있어 dense layer라 부른다.
 
-![mit.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/a723d976-e747-4efa-ae6a-211cf2246a6d.png)
+<img src="Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/a723d976-e747-4efa-ae6a-211cf2246a6d.png" alt="multi-output perceptron" width="500">
 
 $z_i=w_{0,i}+\sum^m_{j=1}x_jw_{j,i}$
 
@@ -228,16 +225,15 @@ class MyDenseLayer(nn.Module):
 
 - final output: $\hat{y_i}=g(w_{0,i}^{(2)}+\sum_{j=1}^{d_1}g(z_j)w_{j,i}^{(2)})$ 
 
-![mit.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/7ddd32e3-2d37-4022-9641-1c4d1ea0f86e.png)
+<img src="Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/7ddd32e3-2d37-4022-9641-1c4d1ea0f86e.png" alt="MLP" width="500">
 
 - $z_2$
     
     $z_2=w_{0,2}^{(1)}+\sum_{j=1}^m{x_jw_{j,2}^{(1)}}$
     
-    $z_2=w_{0,2}^{(1)}+x_1w_{1,2}^{(1)}+x_2w_{2,2}^{(1)}+x_mw_{m,2}^{(1)}$
+    $z_2=w_{0,2}^{(1)}+x_1w_{1,2}^{(1)}+x_2w_{2,2}^{(1)}+\cdots+x_mw_{m,2}^{(1)}$
     
-
-![mit.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/ce4c45f2-12d1-4542-909c-7ae7d0f24203.png)
+<img src="Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/ce4c45f2-12d1-4542-909c-7ae7d0f24203.png" alt="MLP" width="500">
 
 ### Deep Neural Network
 
@@ -245,21 +241,19 @@ class MyDenseLayer(nn.Module):
     
     $z_{k,i}=w_{0,i}^{(k)}+\sum_{j=1}^{n_{k-1}}{g(z_{k-1,j})w_{j,i}^{(k)}}$
     
-
-![mit.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/626bcf92-ab81-42cb-9d55-ab09f64680a4.png)
+<img src="Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/626bcf92-ab81-42cb-9d55-ab09f64680a4.png" alt="DNN" width="500">
 
 ## Example
 
-
-Will I pass this class?
-
-simple two feature model
-
-- $x_1$ = # of lectures you attend
-- $x_2$ = Hours spent on the final project
-
-
-![image.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image.png)
+> [!Important]
+> Will I pass this class?
+> 
+> simple two feature model
+> 
+> - $x_1$ = # of lectures you attend
+> - $x_2$ = Hours spent on the final project
+> <img src="Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image.png" alt="DNN" width="500">
+>
 
 ### Quantifying Loss
 
@@ -267,8 +261,7 @@ simple two feature model
     
     $\mathcal{L}=(f(x^{(i)}; \mathbf{W}), y^{(i)})$
     
-
-![image.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%201.png)
+<img src="Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%201.png" alt="loss" width="500">
 
 ### Empirical Loss
 
@@ -277,8 +270,7 @@ simple two feature model
     
     $\mathcal{J}(\mathbf{W})=\frac{1}{n}\sum^n_{i=1}{\mathcal{L}(f(x^{(i)}; \mathbf{W}), y^{(i)})}$
     
-
-![image.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%202.png)
+<img src="Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%202.png" alt="loss" width="500">
 
 ### Binary Cross Entropy Loss
 
@@ -312,8 +304,7 @@ $$
 \rightarrow \mathbf{W}=\\{ \mathbf{W}^{(0)},\mathbf{W}^{(1)},\cdots \\}
 $$
     
-
-![image.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%203.png)
+<img src="Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%203.png" alt="optimizer" width="500">
 
 - loss: 네트워크 가중치의 함수 형태이다.
 
@@ -324,7 +315,7 @@ $$
 - take small step in opposite direction of gradient
 - repeat until convergence
 
-![image.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%204.png)
+<img src="Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%204.png" alt="GD" width="500">
 
 > [!Important]
 > **[Algorithm]**
@@ -340,11 +331,11 @@ $$
 
 - 하나의 가중치(ex. $w_2$)의 작은 변화가 최종 손실에 얼만큼의 영향을 줄까?
 
-![image.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%205.png)
+<img src="Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%205.png" alt="backpropagation" width="500">
 
 $\frac{\partial J(\mathbf{W})}{\partial w_2}=\frac{\partial J(\mathbf{W})}{\partial \hat y} \times \frac{\partial \hat y}{\partial w_2}$      ← chain rule 적용    
 
-![image.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%206.png)
+<img src="Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%206.png" alt="backpropagation" width="500">
 
 $\frac{\partial J(\mathbf{W})}{\partial w_1}=\frac{\partial J(\mathbf{W})}{\partial \hat y} \times \frac{\partial \hat y}{\partial w_1}$
 
@@ -365,9 +356,8 @@ $\frac{\partial J(\mathbf{W})}{\partial w_1}=\frac{\partial J(\mathbf{W})}{\part
         - small learning rate: 느리게 수렴하고, local minima에 갇힐 수 있다.
         - large learning rate: 과도하여 불안정하거나 발산할 수 있다.
         - stable learning rate: 원할하게 수렴되며, local minima도 피할 수 있다.
-    
-    ![image.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%207.png)
-    
+
+    <img src="Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%207.png" alt="training" width="500">
 
 ### Adaptive Learning Rates
 
@@ -408,7 +398,7 @@ $\frac{\partial J(\mathbf{W})}{\partial w_1}=\frac{\partial J(\mathbf{W})}{\part
 
 ### Overfitting
 
-![image.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%208.png)
+<img src="Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%208.png" alt="overfitiing" width="500">
 
 - Underfitting
     - 모델은 데이터를 완전히 학습할 능력 부족
@@ -424,13 +414,13 @@ $\frac{\partial J(\mathbf{W})}{\partial w_1}=\frac{\partial J(\mathbf{W})}{\part
     1. 훈련 중 무작위로 일부 노드의 활성을 0으로 설정한다.
         1. 통상 레이어의 50%의 활성을 드랍시킨다.
         2. 네트워크가 어떤 노드에 의존하지 않도록 강제시킨다.
-    
-![Dropout](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%209.png)    
+
+<img src="Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%209.png" alt="regularization" width="500">    
     
 2. Early Stopping
     1. overfitting 되기 전에 훈련을 종료시킨다.
-    
-![earlystop.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/earlystop.png)
+
+<img src="Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/earlystop.png" alt="earlystop" width="500">
     
 
 ## XOR Problem & Visualization
@@ -473,7 +463,7 @@ $\frac{\partial J(\mathbf{W})}{\partial w_1}=\frac{\partial J(\mathbf{W})}{\part
     - XOR gate는 비선형적 특성으로 인해 선형적 접근으로 해결 불가능
     - 비선형 문제로 단일 퍼셉트론 연구가 중단
 
-![image.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%2010.png)
+<img src="Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%2010.png" alt="non-linearity" width="500">
 
 - 비선형 문제 접근 방안
     - 다층 구조의 MLP 활용
@@ -551,8 +541,8 @@ $\frac{\partial J(\mathbf{W})}{\partial w_1}=\frac{\partial J(\mathbf{W})}{\part
             ```
             
         - 모델의 출력 시각화
-            
-            ![image.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%2011.png)
+     
+           <img src="Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%2011.png" alt="and-gate" width="500"> 
             
 - OR Gate
     
@@ -604,8 +594,7 @@ $\frac{\partial J(\mathbf{W})}{\partial w_1}=\frac{\partial J(\mathbf{W})}{\part
         equation: [0.2494, 0.7499, 0.7499, 1.2504]
         ```
         
-
-![image.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%2012.png)
+<img src="Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%2012.png" alt="or-gate" width="500">
 
 - XOR Gate
     
@@ -657,15 +646,14 @@ $\frac{\partial J(\mathbf{W})}{\partial w_1}=\frac{\partial J(\mathbf{W})}{\part
             equation: [0.4964, 0.4994, 0.4995, 0.5025]
             ```
             
-        
-        ![image.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%2013.png)
+        <img src="Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%2013.png" alt="xor-gate" width="500">
         
 
 ### Multi-Layer Perceptron
 
 - MLP + activation function
-    
-    ![image.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%2014.png)
+
+    <img src="Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%2014.png" alt="mlp" width="500">
     
     - Output Equation
         - $g(z_1)$: 여기서 $g(\cdot)$은 Sigmoid 함수 적용
@@ -685,7 +673,7 @@ $$
 g(z_1)=\frac{1}{1+e^{-z_1}}=\frac{1}{1+e^{-(w_1x_1+w_2x_2 + b_1)}}
 $$
 
-![image.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%2015.png)              
+<img src="Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%2015.png" alt="mlp" width="500">        
 
 - $g(z_2)$
   - $z_2$
@@ -703,8 +691,8 @@ $$
 $$
 g(z_2)=\frac{1}{1+e^{-z_1}}=\frac{1}{1+e^{-(w_3x_1+w_4x_2 + b_2)}}
 $$
-            
-![image.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%2016.png)
+
+<img src="Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%2016.png" alt="mlp" width="500">
 
             
 - $g(\hat y)$
@@ -723,8 +711,8 @@ $$
 $$
 g(\hat y)=\frac{1}{1+e^{-\hat y}}=\frac{1}{1+e^{-(w_5\frac{1}{1+e^{-(w_1x_1 + w_2x_2 + b_1)}} + w_6 \frac{1}{1+e^{-(w_3x_1 + w_4x_2 + b_2)}} + b_3)}}
 $$
-            
-![image.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%2017.png)
+
+<img src="Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%2017.png" alt="mlp" width="500">
             
     
     ```python
@@ -929,24 +917,21 @@ $$
             
             1/(21.2516975548703exp(-2.44089460372925/(6.8387676076729exp(-1.78852212429047x1 - 1.53758156299591x2) + 1) - 2.49775242805481/(22.7338145774458exp(-2.08193230628967x1 - 2.39206647872925x2) + 1)) + 1)
             
-        
-        ![image.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%2018.png)
+        <img src="Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%2018.png" alt="and" width="500">
         
     - OR Gate
         - output equation
             
             1/(2.64413862903908exp(-0.548751294612885/(1.75157253038228exp(-0.477402716875076x1 - 2.0777223110199x2) + 1) - 2.16720271110535/(1.89182811591751exp(-2.75366592407227x1 - 1.7736884355545x2) + 1)) + 1)
             
-        
-        ![image.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%2019.png)
+        <img src="Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%2019.png" alt="or" width="500">
         
     - XOR Gate
         - output equation
             
             1/(0.182363143616948exp(1.3712340593338/(0.188261997440905exp(2.84197354316711x1 - 3.66640996932983x2) + 1) + 1.11436450481415/(0.359781791347486exp(-3.25776386260986x1 + 1.97481918334961x2) + 1)) + 1)
             
-        
-        ![image.png](Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%2020.png)
+        <img src="Perceptron%20&%20DNN%2022327edcc17f803bb43cc5bdf11faddd/image%2020.png" alt="xor" width="500">
         
 
 ## 참고자료
